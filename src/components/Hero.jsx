@@ -15,10 +15,10 @@ const Hero = () => {
 
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText } text-white`}>Welcome to <span className='text-[#915eff]'>NexoraVision.Ai</span></h1>
+          <h1 className={`${styles.heroHeadText } text-white`}>Welcome to <span className='text-[#915eff]'>SurveilX</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 text-animation`}>
-          Nexora Vision delivers advanced AI-powered computer vision,
-          <br className='sm:block hidden'/> solutions for enhanced surveillance and automation.
+          SurveilX delivers advanced AI-powered computer vision,
+          <br className='sm:block hidden'/> security for enhanced surveillance and automation.
 
 
 

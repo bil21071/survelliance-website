@@ -76,7 +76,7 @@ const Projects = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What we have done so far</p>
-        <h2 className={styles.sectionHeadText}>Nexora Vision Projects.</h2>
+        <h2 className={styles.sectionHeadText}>Services We Provide</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

@@ -74,8 +74,12 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        At NexoraVision, we are at the forefront of innovation in the realms of Artificial Intelligence (AI) and Machine Learning (ML). Our expertise lies in creating cutting-edge computer vision products and services that are transforming various industries. From intelligent surveillance systems that enhance security to advanced IT applications that drive operational efficiency, NexoraVision is dedicated to leveraging the power of AI and ML to solve complex problems and create smarter solutions.
+        At SurveilX, we specialize in real-time threat detection and intelligent security alerts, leveraging advanced AI models to identify critical incidents such as fire outbreaks, weapon detection, physical altercations, and sudden falls. Our system doesn’t just alert you — it generates detailed anomaly reports and provides actionable insights, ensuring you're always one step ahead of any potential security breach.
+        Stay secure. Stay informed. Choose SurveilX.
       </motion.p>
+      <motion.div variants={textVariant()} className='mt-20'>
+        <h2 className={styles.sectionHeadText}>Our Ai Models</h2>
+      </motion.div>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

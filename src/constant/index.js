@@ -29,66 +29,67 @@ import {
 
   export const navLinks = [
     {
-      id: "about",
-      title: "About",
+      id: "Aialerts",
+      title: "Ai Alerts",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "STREAM",
+      title: "Livestream",
     },
     {
-      id: "contact",
-      title: "Contact",
+      id: "report",
+      title: "Anomaly report generator",
+    },
+    {
+      id: "alarm and security",
+      title: "Security chatbot",
+    },
+    {
+      id: "motion style transfer",
+      title: "Motion Transfer",
     },
   ];
   // bro stop yapping 
   const services = [
     {
-      title: "AI and ML Computer Vision Solutions",
+      title: "Fire Model",
       icon: web,
     },
     {
-      title: "Smart Security Surveillance product",
+      title: "Weapon Model",
       icon: mobile,
     },
     {
-      title: "Web development",
+      title: "Fight Model",
       icon: backend,
     },
     {
-      title: "App development",
+      title: "Fall Model",
       icon: creator,
     },
   ];
   export const teamMembers = [
     {
       name: "Muhammad Bilal Zubairi",
-      role: "Founder and CEO",
+      role: "Computer System Engineer",
       photo: "/bilal.jpg",
        linkedin: "https://www.linkedin.com/in/muhammadbilal-zubairi-203124237/",
     },
     {
-      name: "Muhammad Mustafa",
-      role: "Devops Engineer",
-      photo: "/a3.jpeg",
-       linkedin: "https://www.linkedin.com/in/muhammad-bilal-zubairi/",
-    },
-    {
-      name: "Abdullah Bin Talha",
-      role: "Ai developer",
-      photo: "/abdullah.jpg",
-       linkedin: "https://www.linkedin.com/in/muhammad-bilal-zubairi/",
-    },
-    {
-      name: "Zain",
-      role: "Ai developer",
+      name: "Khola Bint-e-Sultan",
+      role: "Computer System Engineer",
       photo: "/image_64.png",
        linkedin: "https://www.linkedin.com/in/muhammad-bilal-zubairi/",
     },
     {
-      
-      name: "Ahmed Saeed",
-      role: "Devops Engineer",
+      name: "Khansa Asif",
+      role: "Computer System Engineer",
+      photo: "/image_64.png",
+       linkedin: "https://www.linkedin.com/in/muhammad-bilal-zubairi/",
+    },
+    {
+      name: "Syeda Hafsa",
+      role: "Computer System Engineer",
       photo: "/image_64.png",
        linkedin: "https://www.linkedin.com/in/muhammad-bilal-zubairi/",
     },
@@ -234,82 +235,70 @@ import {
 
   const projects = [
     {
-      title: "Ai powered Multi-object and pose detection using YOLOv11",
-      company_name: "NexoraVision.Ai",
+      title: "Realtime surveilliance and security detection using yolovn and lstm ",
+      company_name: "SurveilX",
       icon: "https://cdn.prod.website-files.com/6479eab6eb2ed5e597810e9e/66f680814693dd5c3b60dfcb_YOLO11_Thumbnail.png",  // Replace with your project icon image
       iconBg: "#383E56",
       date: "",
       youtubeLink: "https://youtube.com/someVideoLink",  // Replace with actual YouTube link
       githubLink: "https://github.com/yourUsername/ecom-app",  // Replace with actual GitHub link
-      projectImage: "https://doimages.nyc3.cdn.digitaloceanspaces.com/010AI-ML/2024/Shaoni/yolov11/general_object_detection.png",  // Replace with your project image
+      projectImage: "https://i.ytimg.com/vi/m8dIJN6ePKA/maxresdefault.jpg",  // Replace with your project image
       points: [
-        "Real-Time Multi-Object Detection: Utilizes YOLOv11 for detecting various objects in live RTSP camera streams with OpenCV.",
-        "Trained Detection Models: Includes weapon detection, pet/baby detection, fire detection, and fall/jump detection for diverse real-time applications.",
+        "Trained Detection Models: Includes weapon detection, fire detection, and fall detection,fight detection.",
         "Custom AI Solutions: Models are trained for high accuracy in detecting specific objects to enhance security, safety, and monitoring.",
-        "It is trained on GPU geforce rtx 4050"
+        "It is trained on GPU geforce rtx 4050",
+        "Include tracking for the models",
       ],
     },
     {
-      title: "6DOF Robotic Arm using Arduino UNO",
-      company_name: "NexoraVision.Ai",
+      title: "Realtime Live Ai Alerts and Streaming",
+      company_name: "SurveilX",
       icon: "C:/Users/Hp/Desktop/NeuraVision.Ai/AdobeStock_193308746_Preview.jpeg",  // Replace with your project icon image
       iconBg: "#E6DEDD",
       date: "",
-      youtubeLink: "https://youtube.com/shorts/Z1gzr3FByTg?feature=share",  // Replace with actual YouTube link
-      githubLink: "https://github.com/bil21071/ROBOTIC-ARM-6DOF-USING-ROS-AND-ARDUINO",  // Replace with actual GitHub link
-      projectImage: "https://www.robotpark.com/image/cache/data/PRO/95114/95114-Robotpark-6-DOF-Aluminum-Robot-Arm-Kits-2-700x700.jpg",  // Replace with your project image
+      youtubeLink: "",  // Replace with actual YouTube link
+      githubLink: "",  // Replace with actual GitHub link
+      projectImage: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202503/67c822447d7f3-users-can-also-disable-scam-detection-in-the-spam-protection-settings-of-google-messages-if-they-pre-050654608-16x9.jpg?size=948:533",  // Replace with your project image
       points: [
-        "Real-time control of the 6 Degrees of Freedom (DOF) robotic arm using ESP32 for high precision and accuracy.",
-"It is controlled through the ROS2",
-"Utilized advanced algorithms and sensor feedback to enable precise movement",
+        "Provide live Ai alerts detection for the security models",
+        "Stored the data to the firebase",
+        "Livestream of the camera through rtsp"
+
       ],
     },
     {
-      title: "Cancer-Detection-in-Histopathology-Images-Using-TDF-Net-Module-using-ML ",
-      company_name: "NexoraVision.Ai",
+      title: "Anomaly report generator and Security Agent chatbot",
+      company_name: "SurveilX",
       icon: "C:/Users/Hp/Desktop/NeuraVision.Ai/AdobeStock_193308746_Preview.jpeg",  // Replace with your project icon image
       iconBg: "#383E56",
       date: "",
-      youtubeLink: "https://youtube.com/portfolioVideo",  // Replace with actual YouTube link
-      githubLink: "https://github.com/bil21071/Cancer-Detection-in-Histopathology-Images-Using-Multimodal-Data-and-TDF-Net-Module-using-ML",  // Replace with actual GitHub link
-      projectImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs1g2bU5ZfOWHiWYv0DX0H5xDIJV6tGnj2xg&s",  // Replace with your project image
+      youtubeLink: "",  // Replace with actual YouTube link
+      githubLink: "",  // Replace with actual GitHub link
+      projectImage: "https://i.imgur.com/6d0tUmdl.png",  // Replace with your project image
       points: [
-        "The objective of this project was to develop an advanced system for cancer detection in histopathology images using multimodal data and the TDF-Net (Temporal Difference Fusion Network) module. The system aims to combine different types of data, such as histopathology images, genetic data, and patient metadata, to improve the accuracy .",
+        "Create a structured format report by getting the Ai alerts data from the firebase",
+        "User can download the report.",
+        "Security Query chatbot integration",
+        
         
       ],
     },
     {
-      title: "HUMAN-ACTIVITY-RECOGNITION-USING-OPENPOSE-OPENCV-AI ",
-      company_name: "NexoraVision.Ai",
-      icon: "C:/Users/Hp/Desktop/NeuraVision.Ai/AdobeStock_193308746_Preview.jpeg",  // Replace with your project icon image
+      title: "Motion Transfer",
+      company_name: "SurveilX",
+      icon: "https://deepmotionediting.github.io/images/style_transfer/teaser.png",  // Replace with your project icon image
       iconBg: "#383E56",
       date: "",
-      youtubeLink: "https://youtube.com/portfolioVideo",  // Replace with actual YouTube link
-      githubLink: "https://github.com/bil21071/HUMAN-ACTIVITY-RECOGNITION-USING-OPENPOSE-OPENCV-AI",  // Replace with actual GitHub link
-      projectImage: "https://kemtai.com/wp-content/uploads/2022/12/65603fig.png",  // Replace with your project image
+      youtubeLink: "",  // Replace with actual YouTube link
+      githubLink: "",  // Replace with actual GitHub link
+      projectImage: "https://deepmotionediting.github.io/images/style_transfer/teaser.png",  // Replace with your project image
       points: [
-        "It notes the standing and sitting postures and detect them in realtime environment.",
-        "It uses Openpose Library which is used to detect the keypoints or poses.",
-        "Notes the timestamp of the person who is sitting/standing."
+        "point for this will be added soon",
+ 
         
       ]
     },
-    {
-      title: "Face-Recognition-System using DEEPFACE",
-      company_name: "NexoraVision.Ai",
-      icon: "C:/Users/Hp/Desktop/NeuraVision.Ai/AdobeStock_193308746_Preview.jpeg",  // Replace with your project icon image
-      iconBg: "#383E56",
-      date: "",
-      youtubeLink: "https://youtube.com/portfolioVideo",  // Replace with actual YouTube link
-      githubLink: "https://github.com/bil21071/Face-recognition-system-using-deepface",  // Replace with actual GitHub link
-      projectImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX0lWq_c6_KshbMRKhftoJ1U9wQpNFQCBBYg&s",  // Replace with your project image
-      points: [
-       "It uses mediapipe face detector for the face detection process.",
-       "It uses the deepface Facenet512 model for the facial recognition process.",
-       "Detect and recognize the known and unknown visitors."
-        
-      ]
-    },
+    
   ];
 
   
