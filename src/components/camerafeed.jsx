@@ -6,7 +6,7 @@ const CameraFeed = () => {
   useEffect(() => {
     return () => {
       if (isStreaming) {
-        fetch("https://camera-flask-service.onrender.com/stop_feed", { method: "POST" })
+        fetch("http://localhost:5000/stop_feed", { method: "POST" })
           .then((response) => console.log("Camera stopped:", response))
           .catch((err) => console.error("Error stopping camera:", err));
       }
@@ -17,7 +17,7 @@ const CameraFeed = () => {
     <div>
       <h2>Live Webcam Feed</h2>
       <img
-        src="https://camera-flask-service.onrender.com/video_feed"
+        src="http://localhost:5000/video_feed"
         alt="Webcam Stream"
         style={{ width: "100%", borderRadius: "10px" }}
       />
