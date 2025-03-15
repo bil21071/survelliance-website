@@ -65,8 +65,6 @@ const styles = {
     backgroundColor: "#0d0d0d",
     color: "#fff",
     fontFamily: "'Orbitron', sans-serif",
-    padding: "20px",
-    boxSizing: "border-box",
   },
   header: {
     textAlign: "center",
@@ -115,29 +113,6 @@ const styles = {
     textTransform: "uppercase",
     letterSpacing: "2px",
   },
-
-  // Responsive design
-  "@media (maxWidth: 768px)": {
-    title: {
-      fontSize: "2rem",
-      letterSpacing: "3px",
-    },
-    subtitle: {
-      fontSize: "1rem",
-    },
-    cameraContainer: {
-      width: "100%",
-      borderRadius: "15px",
-      border: "2px solid #00C6FF",
-      boxShadow: "0 0 20px #00C6FF",
-    },
-    overlay: {
-      fontSize: "0.8rem",
-      padding: "6px 12px",
-    },
-  },
 };
-
-
 
 export default CameraFeed;
