@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const CameraFeed = () => {
   const videoRef = useRef(null);
-  const apiUrl = "http://localhost:5000"; // Flask backend URL
+  const apiUrl = "https://survelliance-website.onrender.com"; // Flask backend URL
 
   useEffect(() => {
     // Access webcam
