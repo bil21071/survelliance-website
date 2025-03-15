@@ -28,7 +28,7 @@ const CameraFeed = () => {
               headers: { "Content-Type": "image/jpeg" }
             }).catch((err) => console.error("Failed to send frame:", err));
           }, "image/jpeg");
-          requestAnimationFrame(sendFrame);
+          setTimeout(sendFrame, 33);
         };
 
         sendFrame();
