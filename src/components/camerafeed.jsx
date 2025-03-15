@@ -61,11 +61,16 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: "100vh",
+    height: "auto", // Adjusts to content height
+    minHeight: "100vh", // Ensures it covers the full viewport but allows scrolling
     backgroundColor: "#0d0d0d",
     color: "#fff",
     fontFamily: "'Orbitron', sans-serif",
+    padding: "20px", // Added padding for breathing room
+    boxSizing: "border-box",
+    overflowY: "auto", // Enables scrolling when content overflows
   },
+  
   header: {
     textAlign: "center",
     marginBottom: "20px",
