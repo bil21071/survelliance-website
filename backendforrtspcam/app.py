@@ -13,7 +13,7 @@ is_streaming = True
 lock = threading.Lock()
 
 # RTSP stream URL
-rtsp_url = "rtsp://192.168.1.5/live/ch00_1"
+rtsp_url = "rtsp://admin:YQAQYJ@192.168.1.16:554/h265_stream"
 
 # Function to initialize the RTSP stream
 def initialize_stream():
