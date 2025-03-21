@@ -1,42 +1,65 @@
-from flask import Flask, request, Response
+from flask import Flask, Response
 from flask_cors import CORS
 import cv2
-import numpy as np
 import threading
-import traceback
+import time
+
 app = Flask(__name__)
 CORS(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
 frame = None
 is_streaming = True
 lock = threading.Lock()
 
-@app.route('/upload_frame', methods=['POST'])
-def upload_frame():
-    global frame
-    if not is_streaming:
-        return "Streaming stopped", 403
+# RTSP stream URL
+rtsp_url = "rtsp://192.168.1.5/live/ch00_1"
 
-    try:
-        file = request.data
-        np_arr = np.frombuffer(file, np.uint8)
-        frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-        if frame is None:
-            print("Failed to decode frame.")
-            return "Invalid frame data", 400
-        return "Frame received", 200
-    except Exception as e:
-        print("Error in /upload_frame:", e)
-        traceback.print_exc()  # Show full error details
-        return "Internal Server Error", 500
+# Function to initialize the RTSP stream
+def initialize_stream():
+    cap = cv2.VideoCapture(rtsp_url)
+    if not cap.isOpened():
+        print("Error: Could not open RTSP stream.")
+        return None
+    print("Successfully opened RTSP stream.")
+    return cap
+
+# Open the RTSP stream initially
+cap = initialize_stream()
 
 def generate_frames():
-    global frame, is_streaming
+    global frame, is_streaming, cap
+
+    # FPS counter variables
+    frame_count = 0
+    start_time = time.time()
+
     while is_streaming:
-        if frame is not None:
+        if cap is None or not cap.isOpened():
+            cap = initialize_stream()  # Re-initialize if the stream is unavailable
+            # Reset FPS counter when reinitializing
+            start_time = time.time()
+            frame_count = 0
+
+        if cap is not None and cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                print("Error: Failed to capture frame from RTSP stream.")
+                continue  # Skip to the next loop iteration if no frame is captured
+
+            # Increase frame counter
+            frame_count += 1
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= 1.0:  # Every 1 second, print FPS and reset counter
+                print(f"FPS: {frame_count}")
+                frame_count = 0
+                start_time = time.time()
+
             _, buffer = cv2.imencode('.jpg', frame)
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + buffer.tobytes() + b'\r\n')
+        else:
+            time.sleep(1)  # If no frame is available, wait before trying again
 
 @app.route('/video_feed')
 def video_feed():
@@ -52,4 +75,4 @@ def stop_feed():
     return "Streaming stopped", 200
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, threaded=True)

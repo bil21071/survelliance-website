@@ -1,76 +1,77 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const CameraFeed = () => {
   const videoRef = useRef(null);
+  const [isStreaming, setIsStreaming] = useState(true); // Track streaming status
+  const [isError, setIsError] = useState(false); // Track error state
   const apiUrl = "https://survelliance-website.onrender.com"; // Flask backend URL
 
   useEffect(() => {
-    // Access webcam
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then((stream) => {
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
+    // Start streaming from Flask
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.src = `${apiUrl}/video_feed`;
+    }
+    
+    // Handle errors in video stream
+    const handleError = (event) => {
+      console.error("Error loading video stream:", event);
+      setIsError(true); // Set error state if stream fails
+    };
 
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
+    // Attach error event listener
+    if (videoElement) {
+      videoElement.addEventListener('error', handleError);
+    }
 
-        // Send frames to Flask every 33ms (30 FPS)
-        const sendFrame = () => {
-          if (!videoRef.current) return;
-          canvas.width = videoRef.current.videoWidth;
-          canvas.height = videoRef.current.videoHeight;
-          context.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-          canvas.toBlob((blob) => {
-            fetch(`${apiUrl}/upload_frame`, {
-              method: "POST",
-              body: blob,
-              headers: { "Content-Type": "image/jpeg" }
-            }).catch((err) => console.error("Failed to send frame:", err));
-          }, "image/jpeg");
-          setTimeout(sendFrame, 33);
-        };
-
-        sendFrame();
-      })
-      .catch((err) => console.error("Error accessing webcam:", err));
+    // Clean up event listener on unmount
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('error', handleError);
+      }
+    };
   }, []);
 
   return (
     <div style={styles.container}>
       <div style={styles.header}>
         <h1 style={styles.title}>🤖 AI Surveillance</h1>
-        <p style={styles.subtitle}>Live Camera Feed Streaming at 30 FPS</p>
+        <p style={styles.subtitle}>Live Camera Feed Streaming</p>
       </div>
       <div style={styles.cameraContainer}>
-        <video
-          ref={videoRef}
-          autoPlay
-          playsInline
+        {isError ? (
+          <div style={styles.error}>Failed to load stream</div>
+        ) : (
+          <img
+          src={`${apiUrl}/video_feed`}
+          alt="Live Camera Feed"
           style={styles.video}
         />
-        <div style={styles.overlay}>Recording...</div>
+        )}
+        {isError && <div style={styles.overlay}>Error loading stream...</div>}
+        {!isError && !isStreaming && (
+          <div style={styles.overlay}>Loading Stream...</div>
+        )}
       </div>
     </div>
   );
 };
 
 const styles = {
-container: {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "auto", // Adjusts to content height
-  minHeight: "110vh", // Ensures it covers the full viewport but allows scrolling
-  backgroundColor: "#0d0d0d",
-  color: "#fff",
-  fontFamily: "'Orbitron', sans-serif",
-  padding: "20px", // Added padding for breathing room
-  boxSizing: "border-box",
-  overflowY: "auto", // Enables scrolling when content overflows
-},
-
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "auto",
+    minHeight: "110vh",
+    backgroundColor: "#0d0d0d",
+    color: "#fff",
+    fontFamily: "'Orbitron', sans-serif",
+    padding: "20px",
+    boxSizing: "border-box",
+    overflowY: "auto",
+  },
   header: {
     textAlign: "center",
     marginBottom: "20px",
@@ -117,6 +118,15 @@ container: {
     color: "#0d0d0d",
     textTransform: "uppercase",
     letterSpacing: "2px",
+  },
+  error: {
+    color: "red",
+    fontSize: "20px",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    textAlign: "center",
   },
 };
 
