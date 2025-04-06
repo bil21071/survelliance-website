@@ -5,7 +5,6 @@ import threading
 import time
 
 app = Flask(__name__)
-CORS(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 frame = None
@@ -13,16 +12,25 @@ is_streaming = True
 lock = threading.Lock()
 
 # RTSP stream URL
-rtsp_url = "rtsp://admin:YQAQYJ@192.168.1.16:554/h265_stream"
+rtsp_url = "rtsp://192.168.1.5/live/ch00_1"
 
-# Function to initialize the RTSP stream
+# Maximum retry attempts
+MAX_RETRIES = 5
+RETRY_DELAY = 5  # seconds
+
+# Function to initialize the RTSP stream with retry logic
 def initialize_stream():
-    cap = cv2.VideoCapture(rtsp_url)
-    if not cap.isOpened():
-        print("Error: Could not open RTSP stream.")
-        return None
-    print("Successfully opened RTSP stream.")
-    return cap
+    for attempt in range(1, MAX_RETRIES + 1):
+        cap = cv2.VideoCapture(rtsp_url)
+        if cap.isOpened():
+            print(f"✅ Successfully opened RTSP stream on attempt {attempt}")
+            return cap
+        print(f"⚠️ Attempt {attempt}/{MAX_RETRIES} - Could not open RTSP stream. Retrying in {RETRY_DELAY} seconds...")
+        cap.release()
+        time.sleep(RETRY_DELAY)
+
+    print("❌ Max retries reached. Unable to open RTSP stream.")
+    return None  # Return None if all attempts fail
 
 # Open the RTSP stream initially
 cap = initialize_stream()
@@ -36,22 +44,27 @@ def generate_frames():
 
     while is_streaming:
         if cap is None or not cap.isOpened():
-            cap = initialize_stream()  # Re-initialize if the stream is unavailable
-            # Reset FPS counter when reinitializing
+            cap = initialize_stream()  # Retry if the stream is unavailable
+
+            if cap is None:  # If the retry limit is reached, stop the stream
+                print("❌ Exiting stream due to repeated failures.")
+                break  
+
+            # Reset FPS counter after reinitialization
             start_time = time.time()
             frame_count = 0
 
         if cap is not None and cap.isOpened():
             ret, frame = cap.read()
             if not ret:
-                print("Error: Failed to capture frame from RTSP stream.")
-                continue  # Skip to the next loop iteration if no frame is captured
+                print("⚠️ Error: Failed to capture frame from RTSP stream.")
+                continue  # Skip this loop iteration if no frame is captured
 
             # Increase frame counter
             frame_count += 1
             elapsed_time = time.time() - start_time
             if elapsed_time >= 1.0:  # Every 1 second, print FPS and reset counter
-                print(f"FPS: {frame_count}")
+                print(f"🎥 FPS: {frame_count}")
                 frame_count = 0
                 start_time = time.time()
 
@@ -59,7 +72,7 @@ def generate_frames():
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + buffer.tobytes() + b'\r\n')
         else:
-            time.sleep(1)  # If no frame is available, wait before trying again
+            time.sleep(1)  # If no frame is available, wait before retrying
 
 @app.route('/video_feed')
 def video_feed():
