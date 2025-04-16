@@ -30,7 +30,7 @@ import {
   export const navLinks = [
     {
       id: "Aialerts",
-      title: "Ai Alerts",
+      title: "AiAlerts",
     },
     {
       id: "STREAM",
@@ -44,10 +44,10 @@ import {
       id: "alarm and security",
       title: "Security chatbot",
     },
-    {
-      id: "motion style transfer",
-      title: "Motion Transfer",
-    },
+    // {
+    //   id: "motion style transfer",
+    //   title: "Motion Transfer",
+    // },
   ];
   // bro stop yapping 
   const services = [

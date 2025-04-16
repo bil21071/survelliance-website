@@ -4,6 +4,7 @@ import { BrowserRouter as Router ,Route,Routes } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar,  Tech, Works, StarsCanvas ,CameraFeed} from './components';
 
 import 'font-awesome/css/font-awesome.min.css';
+import AiAlerts from './components/AiAlertDashboard';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             }
           />
           <Route path="/livestream" element={<CameraFeed />} />
+          <Route path="/aialert" element={<AiAlerts />} />
         </Routes>
       </div>
     </Router>

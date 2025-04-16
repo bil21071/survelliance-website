@@ -16,6 +16,28 @@ from utils.weapon_v8 import weapon_v8
 from utils.detection_state import DetectionState
 from utils.fire_v8 import fire_v8
 from utils.combined_fall_jump import fall_jump_v8
+import cv2
+import uuid
+from firebase_config import db
+#save the detection for the firebase 
+def save_detection_to_firebase(event_type, location, frame):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    filename = f"{event_type}_{uuid.uuid4().hex}.jpg"
+    local_path = os.path.join("saved_frames", filename)
+
+    # Create directory if it doesn't exist
+    os.makedirs("saved_frames", exist_ok=True)
+
+    # Save frame locally
+    cv2.imwrite(local_path, frame)
+
+    # Store only metadata in Firestore
+    db.collection("detections").add({
+        "event": event_type,
+        "timestamp": timestamp,
+        "location": location,
+        "local_path": local_path  # optional, for debug or local referencing
+    })
 
 
 
@@ -28,7 +50,9 @@ def fire_tracking(frame, conn_dict):
     
     if (detected_classes != ''):
         conn_dict.res_fire = {'Fire': 'None'}
-        stream_logger.info('Fire Detected')            
+        stream_logger.info('Fire Detected')         
+        location = "Karachi , Pakistan"
+        save_detection_to_firebase("Fire Detected", location, frame)            
 
         conn_dict.res_fire = False
 
@@ -49,7 +73,8 @@ def weapon_tracking( frame, conn_dict):
         conn_dict.res_weap = {'Weapon': 'None'}
         
         stream_logger.info('Weapon Detected')            
-        # Store image parameters in `conn_dict`
+        location = "Karachi Pakistan"
+        save_detection_to_firebase("Weapon Detected", location, frame)
         conn_dict.res_weap = False
  
         
@@ -72,6 +97,9 @@ def fall_jump_combined_tracking( frame, conn_dict):
             if detected_class == "fall":
                 conn_dict.res_fall = {'fall': 'None'}
                 stream_logger.info(f'Fall detection...{conn_dict.res_fall}')
+                           
+                location = "Karachi , Pakistan"
+                save_detection_to_firebase("Fall is detected", location, frame)
                
 
                 
@@ -81,6 +109,8 @@ def fall_jump_combined_tracking( frame, conn_dict):
             elif detected_class == "jump":
                 conn_dict.res_jump = {'Jump': 'None'}
                 stream_logger.info(f'Jump detection...{conn_dict.res_jump}')
+                location = "Karachi Pakistan"
+                save_detection_to_firebase("Jump is detected", location, frame)
                 
 
 

@@ -61,7 +61,9 @@ const Navbar = () => {
 
     if (link.id === 'STREAM') {
       navigate('/livestream'); // Navigate to the livestream page
-    } else {
+    }else if (link.id === 'Aialerts') {
+      navigate('/aialert'); // Navigate to the livestream page
+    }else {
       navigate('/'); // Ensure we're on the home page first
       setTimeout(() => {
         const section = document.getElementById(link.id);
@@ -123,6 +125,8 @@ const Navbar = () => {
                   onClick={() => handleNavClick(link)}
                 >
                   {link.id === 'STREAM' ? 'Livestream' : link.title}
+                  {link.id === 'Aialerts' ? 'AiAlerts' : link.title}
+
                 </li>
               ))}
             </ul>

@@ -1,0 +1,410 @@
+2025-04-13 14:24:06,183 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-13 14:24:06,352 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-13 14:24:06,426 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
+2025-04-13 14:24:33,944 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-13 14:24:33,946 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-13 14:24:33,949 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-13 14:24:34,161 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:34,164 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:34,299 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:34,304 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:34,304 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:34,987 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:34,991 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,185 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,187 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,318 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,320 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,359 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,360 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,513 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,515 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,557 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,559 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,603 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,604 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:35,733 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,734 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:35,734 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:35,758 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,759 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:35,759 - INFO - Detection: Class hand, Track ID: 1
+2025-04-13 14:24:35,784 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,786 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,895 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,896 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,938 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,940 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:35,949 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-13 14:24:35,950 - INFO - Detection: Class hand, Track ID: 0
+2025-04-13 14:24:36,014 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:18:12,986 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-14 05:18:13,051 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-14 05:18:13,117 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
+2025-04-14 05:19:13,882 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:13,883 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:13,888 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:13,890 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:14,095 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:14,256 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:14,262 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:14,427 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:14,428 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:14,608 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:14,609 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:14,752 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:14,755 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:14,755 - INFO - Detection: Class Not_fire, Track ID: 1
+2025-04-14 05:19:14,803 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:14,936 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:14,957 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:14,988 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:14,990 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:15,129 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:15,130 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:15,161 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:15,161 - INFO - Detection: Class Pistol_hand, Track ID: 1
+2025-04-14 05:19:15,181 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:15,182 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:15,283 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,329 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,349 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,444 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,497 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,519 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:15,598 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:15,599 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:15,628 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:15,628 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:19,831 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:19,832 - INFO - Detection: Class Not_fire, Track ID: 1
+2025-04-14 05:19:19,832 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:19,940 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:19:19,940 - INFO - Detection: Class Dog, Track ID: 0
+2025-04-14 05:19:20,132 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,133 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,133 - INFO - Detection: Class Not_fire, Track ID: 1
+2025-04-14 05:19:20,262 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,264 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,414 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,415 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,529 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,530 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,565 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,566 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,616 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,617 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:20,660 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:20,661 - INFO - Detection: Class Not_fire, Track ID: 0
+2025-04-14 05:19:24,276 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:19:24,276 - INFO - Detection: Class Not_fire, Track ID: 1
+2025-04-14 05:19:24,671 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:24,733 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:24,870 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:32,270 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:32,270 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:32,271 - INFO - New Weapon detection, Pistol_hand track id: 2
+2025-04-14 05:19:32,429 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:32,430 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:32,587 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:32,588 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:32,629 - INFO - Detected Pistol_hand with confidence 0.73
+2025-04-14 05:19:32,630 - INFO - Weapon Detected
+2025-04-14 05:19:32,768 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:32,770 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:33,089 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:33,186 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:33,236 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:33,402 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:33,403 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:33,430 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:19:33,431 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:19:41,498 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:41,560 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:44,350 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:19:47,397 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:03,980 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:20:03,981 - INFO - Detection: Class Not_fire, Track ID: 2
+2025-04-14 05:20:09,807 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:20:09,808 - INFO - Detection: Class Not_fire, Track ID: 2
+2025-04-14 05:20:21,505 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:21,572 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:21,573 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:21,639 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:21,640 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:21,704 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:21,704 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:21,767 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:21,907 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:21,907 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:22,039 - INFO - Combined model detections (Threshold=0.2): {'Cat'}
+2025-04-14 05:20:22,040 - INFO - Detection: Class Cat, Track ID: 2
+2025-04-14 05:20:22,102 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:22,103 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:22,167 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:22,225 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:20:22,226 - INFO - Detection: Class Pistol_hand, Track ID: 2
+2025-04-14 05:20:22,309 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:22,368 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:22,498 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:22,499 - INFO - Detection: Class Dog, Track ID: 2
+2025-04-14 05:20:22,560 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:22,626 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:22,626 - INFO - Detection: Class Dog, Track ID: None
+2025-04-14 05:20:22,841 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:22,841 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:20:22,842 - INFO - Detection: Class Dog, Track ID: 4
+2025-04-14 05:20:22,966 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:22,968 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:20:22,968 - INFO - Detection: Class Dog, Track ID: 4
+2025-04-14 05:20:23,041 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:23,111 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:23,304 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:20:23,306 - INFO - Detection: Class Mobile, Track ID: 4
+2025-04-14 05:20:23,374 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-14 05:20:23,374 - INFO - Detection: Class hand, Track ID: 4
+2025-04-14 05:20:23,444 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:23,446 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:20:27,036 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,082 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,120 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,169 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,233 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,322 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:27,966 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:20:27,966 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:20:28,113 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand', 'Mobile'}
+2025-04-14 05:20:28,114 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:20:28,114 - INFO - Detection: Class Pistol_hand, Track ID: 3
+2025-04-14 05:20:28,114 - INFO - New Weapon detection, Pistol_hand track id: 3
+2025-04-14 05:20:28,211 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:20:28,212 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:20:28,241 - INFO - Weapon Detected
+2025-04-14 05:20:29,715 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:29,822 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:37,130 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:20:37,131 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:20:39,258 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:39,394 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:39,653 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:43,173 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:20:55,881 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:02,360 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:12,736 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:15,445 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:21:15,446 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:21:15,502 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:15,602 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:15,645 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:15,781 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:17,712 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:18,775 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:19,309 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:25,996 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:26,022 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:26,258 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:26,404 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:21:26,405 - INFO - Detection: Class Not_fire, Track ID: 3
+2025-04-14 05:21:28,206 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:28,566 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:29,288 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:29,327 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:30,301 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:32,559 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:32,677 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:32,794 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:38,192 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:21:38,192 - INFO - Detection: Class Not_fire, Track ID: 3
+2025-04-14 05:21:38,501 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:54,515 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:21:54,515 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:21:54,558 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:54,618 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:54,705 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:54,765 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:54,817 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:21:54,818 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:21:54,919 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:21:54,919 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:21:56,494 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:21:56,495 - INFO - Detection: Class Pistol_hand, Track ID: 3
+2025-04-14 05:21:56,559 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:21:56,560 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:21:56,809 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:21:56,809 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:21:56,932 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:21:56,932 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:21:57,671 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:21:57,671 - INFO - Detection: Class Pistol_hand, Track ID: 3
+2025-04-14 05:21:57,710 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:21:57,798 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:00,428 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:00,494 - INFO - Combined model detections (Threshold=0.2): {'Person'}
+2025-04-14 05:22:00,495 - INFO - Detection: Class Person, Track ID: 3
+2025-04-14 05:22:00,562 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:00,563 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:02,030 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:02,905 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:02,964 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:03,063 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:03,147 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:04,700 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:04,800 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:04,902 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:04,944 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:22:04,945 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:22:05,954 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:22:05,954 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:22:05,983 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:06,043 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:06,098 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:07,627 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:07,710 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:07,770 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:07,770 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:07,842 - INFO - Combined model detections (Threshold=0.2): {'fist', 'Dog'}
+2025-04-14 05:22:07,844 - INFO - Detection: Class fist, Track ID: 5
+2025-04-14 05:22:07,844 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:07,929 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:07,930 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:08,118 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:08,118 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:08,175 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:22:08,176 - INFO - Detection: Class Pistol_hand, Track ID: 5
+2025-04-14 05:22:08,176 - INFO - New Weapon detection, Pistol_hand track id: 5
+2025-04-14 05:22:08,240 - INFO - Weapon Detected
+2025-04-14 05:22:08,342 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:22:08,342 - INFO - Detection: Class Pistol_hand, Track ID: 5
+2025-04-14 05:22:08,765 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:08,766 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:08,826 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:08,827 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:08,945 - INFO - Combined model detections (Threshold=0.2): {'Dog'}
+2025-04-14 05:22:08,946 - INFO - Detection: Class Dog, Track ID: 3
+2025-04-14 05:22:09,895 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:09,975 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:10,059 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:10,113 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,330 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,383 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,454 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,572 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,706 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-14 05:22:12,707 - INFO - Detection: Class hand, Track ID: 3
+2025-04-14 05:22:12,790 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,850 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:22:12,852 - INFO - Detection: Class Mobile, Track ID: 3
+2025-04-14 05:22:12,916 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:12,973 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:13,110 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,105 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,233 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,261 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,329 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,381 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,450 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:14,905 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:15,010 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:15,135 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:15,190 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:15,252 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:15,317 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:16,253 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:21,919 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:21,978 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:22,090 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:22,147 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:22,254 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,315 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,404 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,466 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,533 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,732 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,800 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:24,865 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:22:24,866 - INFO - Detection: Class Not_fire, Track ID: 6
+2025-04-14 05:22:24,930 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,061 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,124 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,206 - INFO - Combined model detections (Threshold=0.2): {'Not_fire'}
+2025-04-14 05:22:25,206 - INFO - Detection: Class Not_fire, Track ID: 6
+2025-04-14 05:22:25,457 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,530 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,601 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,666 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,731 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,795 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:25,881 - INFO - Combined model detections (Threshold=0.2): {'Pistol_hand'}
+2025-04-14 05:22:25,881 - INFO - Detection: Class Pistol_hand, Track ID: 6
+2025-04-14 05:22:25,882 - INFO - New Weapon detection, Pistol_hand track id: 6
+2025-04-14 05:22:25,935 - INFO - Weapon Detected
+2025-04-14 05:22:26,737 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:26,797 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:27,196 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-14 05:22:27,259 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-14 05:22:27,259 - INFO - Detection: Class Mobile, Track ID: 6
+2025-04-14 05:22:41,917 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:15:39,429 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-16 04:15:39,541 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-16 04:15:39,623 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
+2025-04-16 04:18:05,474 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-16 04:18:05,588 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-16 04:18:05,689 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
+2025-04-16 04:48:25,408 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-16 04:48:25,501 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-16 04:48:25,582 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
+2025-04-16 04:49:02,741 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:02,741 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:02,741 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:02,889 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,023 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,048 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,267 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,291 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,321 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,442 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,492 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,532 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,652 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,706 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:03,714 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:06,492 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:06,496 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:10,575 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:10,679 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:10,727 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:10,967 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:12,516 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:12,609 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:12,661 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:12,795 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:12,828 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:12,914 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:12,915 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:12,959 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:12,960 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:13,189 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:13,189 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:13,247 - INFO - Combined model detections (Threshold=0.2): {'Mobile'}
+2025-04-16 04:49:13,248 - INFO - Detection: Class Mobile, Track ID: 0
+2025-04-16 04:49:13,709 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:13,783 - INFO - Combined model detections (Threshold=0.2): {'Rifle_hand'}
+2025-04-16 04:49:13,785 - INFO - Detection: Class Rifle_hand, Track ID: 1
+2025-04-16 04:49:13,787 - INFO - Detection: Class Rifle_hand, Track ID: 2
+2025-04-16 04:49:13,787 - INFO - New Weapon detection, Rifle_hand track id: 2
+2025-04-16 04:49:13,951 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:14,012 - INFO - Combined model detections (Threshold=0.2): {'fist'}
+2025-04-16 04:49:14,015 - INFO - Detection: Class fist, Track ID: 0
+2025-04-16 04:49:14,112 - INFO - Combined model detections (Threshold=0.2): {'hand'}
+2025-04-16 04:49:14,113 - INFO - Detection: Class hand, Track ID: 0
+2025-04-16 04:49:14,189 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:14,246 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:14,323 - INFO - Weapon Detected
+2025-04-16 04:49:15,495 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:15,598 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:15,681 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:15,724 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 04:49:24,449 - INFO - Combined model detections (Threshold=0.2): set()
+2025-04-16 05:44:58,005 - INFO - Loaded model: weights/fall_jump_combined_1_1_25_yolo11n_best.pt on cpu
+2025-04-16 05:44:58,077 - INFO - Loaded model: weights/weapon_24_2_25_yolo11n_best.pt on cpu
+2025-04-16 05:44:58,139 - INFO - Loaded model: weights/fire_22_8_24_best.pt on cpu
