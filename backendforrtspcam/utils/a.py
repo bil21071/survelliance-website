@@ -11,3 +11,5 @@ if not firebase_admin._apps:
 
 # Firebase DB reference
 db_ref = db.reference("/") # This is the root of your Realtime DB
+data={'user':{'user':{'firstname':'Ali'}}}
+db_ref.set(data)

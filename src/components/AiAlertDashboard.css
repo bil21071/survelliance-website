@@ -1,36 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
 
+/* Overall Dashboard Container */
 .dashboard {
   padding: 20px;
   background-color: #2f2f2f;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   color: #e0e0e0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
+/* Header */
 .header {
   text-align: center;
   margin-bottom: 30px;
   color: #00bcd4;
 }
 
+.header h1 {
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #bdbdbd;
+}
+
+/* Stats Section */
 .stats {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .stat-item {
   background-color: #1d1d1d;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   width: 28%;
   min-width: 220px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -40,39 +53,94 @@
 }
 
 .stat-item h2 {
-  font-size: 20px;
+  font-size: 1.1rem;
   margin-bottom: 15px;
   color: #ff5722;
 }
 
 .stat-item p {
-  font-size: 28px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #00e5ff;
 }
 
-/* Chart Container */
-.chart-container {
+/* Charts Grid */
+.charts-grid {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+.futuristic-button {
+  background: linear-gradient(90deg, #00e5ff, #00bcd4);
+  color: #0f0f0f;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00bcd4;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.futuristic-button:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00bcd4;
+  transform: scale(1.05);
+}
+
+.chart-box {
   position: relative;
-  height: 400px;
-  width: 100%;
-  margin-bottom: 60px;
+  min-height: 450px;
   border-radius: 12px;
   background: linear-gradient(45deg, #212121, #1f1f1f);
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-.chart-container canvas {
-  width: 100% !important;
+.chart-container {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.chart-box canvas {
   height: 100% !important;
+  width: 100% !important;
 }
 
-.chart-container h2 {
+
+.chart-box h2 {
   text-align: center;
-  color: #00bcd4;
-  font-family: 'Orbitron', sans-serif;
   margin-bottom: 16px;
+  color: #00bcd4;
+  font-family: "Orbitron", sans-serif;
 }
 
 /* Alerts Section */
@@ -81,48 +149,55 @@
 }
 
 .alerts h2 {
-  text-align: center;
-  font-size: 26px;
+  font-size: 1.6rem;
   color: #00bcd4;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-shadow: 0 0 6px #00e5ff;
+  text-align: left;
+  margin-left: 10px;
 }
 
-.alert-card {
+/* Alerts List Display (alternative format) */
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.alert-list-item {
   background: linear-gradient(145deg, #2b2b2b, #1d1d1d);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  max-width: 600px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   border: 1px solid #00e5ff;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.alert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+.alert-list-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
 }
 
-.alert-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+/* Each alert text section */
+.alert-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-event {
+  font-size: 1rem;
   color: #00ffe5;
-  text-shadow: 0 0 8px #00ffe5;
+  font-weight: bold;
 }
 
-.alert-card p {
-  font-size: 16px;
+.alert-location,
+.alert-timestamp {
+  font-size: 0.8rem;
   color: #c0f7f7;
-}
-
-.alert-card img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 12px;
-  border-radius: 8px;
-  border: 2px solid #00e5ff;
-  box-shadow: 0 0 12px #00e5ff;
 }
 
 /* Optional futuristic button */
@@ -135,6 +210,7 @@
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Orbitron", sans-serif;
 }
 
 .button:hover {

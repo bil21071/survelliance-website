@@ -1,4 +1,5 @@
-from flask import Flask, Response
+from flask import Flask, Response,send_from_directory
+
 from flask_cors import CORS
 import cv2
 import threading
@@ -129,6 +130,10 @@ def video_feed():
     global is_streaming
     is_streaming = True
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route("/frames/<path:filename>")
+def get_frame(filename):
+    return send_from_directory("saved_frames", filename)
 
 @app.route('/stop_feed', methods=['POST'])
 def stop_feed():

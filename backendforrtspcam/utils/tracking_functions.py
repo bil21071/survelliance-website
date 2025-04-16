@@ -18,26 +18,28 @@ from utils.fire_v8 import fire_v8
 from utils.combined_fall_jump import fall_jump_v8
 import cv2
 import uuid
-from firebase_config import db
+from firebase_config import db_ref  
 #save the detection for the firebase 
 def save_detection_to_firebase(event_type, location, frame):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     filename = f"{event_type}_{uuid.uuid4().hex}.jpg"
     local_path = os.path.join("saved_frames", filename)
 
-    # Create directory if it doesn't exist
     os.makedirs("saved_frames", exist_ok=True)
-
-    # Save frame locally
     cv2.imwrite(local_path, frame)
 
-    # Store only metadata in Firestore
-    db.collection("detections").add({
+    # Serve image via Flask
+    image_url = f"http://localhost:5000/frames/{filename.replace(' ', '%20')}"
+
+    data = {
         "event": event_type,
         "timestamp": timestamp,
         "location": location,
-        "local_path": local_path  # optional, for debug or local referencing
-    })
+        "local_path": local_path,
+        "image_url": image_url
+    }
+
+    db_ref.child("detections").push().set(data)
 
 
 
