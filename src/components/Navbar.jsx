@@ -63,8 +63,12 @@ const Navbar = () => {
       navigate('/livestream'); // Navigate to the livestream page
     }else if (link.id === 'Aialerts') {
       navigate('/aialert'); // Navigate to the livestream page
+    }else if (link.id === 'report') {
+      navigate('/anomalyreportgen'); // Navigate to the reports page
+    }else if (link.id === 'alarmandsecurity') {
+      navigate('/Securityagentchatbot'); // Navigate to the reports page
     }else {
-      navigate('/'); // Ensure we're on the home page first
+      navigate('/'); // Default to the home page if no conditions match// Ensure we're on the home page first
       setTimeout(() => {
         const section = document.getElementById(link.id);
         if (section) {
@@ -126,6 +130,8 @@ const Navbar = () => {
                 >
                   {link.id === 'STREAM' ? 'Livestream' : link.title}
                   {link.id === 'Aialerts' ? 'AiAlerts' : link.title}
+                  {link.id === 'report' ? 'Anomalyreportgenerator' : link.title}
+                  {link.id === 'alarmandsecurity' ? 'Securitychatbot' : link.title}
 
                 </li>
               ))}

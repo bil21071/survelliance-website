@@ -161,8 +161,8 @@ const AiAlerts = () => {
   // Alternate Alert Display: A simple list (without images)
   const renderAlertMessages = () =>
     alerts.map((alert, index) => (
-      <div key={index} className="alert-list-item">
-        <div className="alert-text">
+      <div key={index} className="alert-list-item1">
+        <div className="alert-text1">
           <span className="alert-event">{alert.event}</span>
           <span className="alert-location">{alert.location}</span>
           <span className="alert-timestamp">
@@ -318,7 +318,7 @@ const AiAlerts = () => {
       {/* Alerts Section */}
       <div className="alerts">
         <h2>Recent Alerts</h2>
-        <div className="alerts-list">
+        <div className="alerts-list1">
           {alerts.length > 0 ? renderAlertMessages() : <p>No alerts found.</p>}
         </div>
       </div>

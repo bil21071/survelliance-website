@@ -7,7 +7,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from utils import motion, yolo_world_v8
 from utils.combined_fall_jump import fall_jump_v8
-from utils.tracking_functions import weapon_tracking, fire_tracking
+from utils.tracking_functions import weapon_tracking, fire_tracking,fall_jump_combined_tracking
 from logs.Logger import Logs
 from threading import Lock
 from logs.logging_config import stream_logger
@@ -56,7 +56,7 @@ cap = initialize_stream()
 
 # Detection thread functions
 def run_fall_jump_thread(frame, conn):
-    fall_jump_v8(frame)
+    fall_jump_combined_tracking(frame,conn)
 
 def run_yolo_detection_thread(frame, conn):
     new_detections, _ = yolo_world_v8.score_frame_new(frame, threshold=0.2, conn_dict=conn)
@@ -109,7 +109,7 @@ def generate_frames():
         if text == "DANGER":
             print("🚨 Motion detected!")
             executorcombined.submit(run_yolo_detection_thread, frame, conn)
-            executorcombined.submit(run_fall_jump_thread, frame, conn)
+            executor.submit(run_fall_jump_thread, frame, conn)
 
         # FPS monitoring
         frame_count += 1

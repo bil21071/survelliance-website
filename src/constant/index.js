@@ -38,11 +38,11 @@ import {
     },
     {
       id: "report",
-      title: "Anomaly report generator",
+      title: "Anomalyreportgenerator",
     },
     {
-      id: "alarm and security",
-      title: "Security chatbot",
+      id: "alarmandsecurity",
+      title: "Securitychatbot",
     },
     // {
     //   id: "motion style transfer",

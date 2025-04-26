@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 logger = Logs()
 from threading import Lock
+# from utils.gps_location import get_gps_coordinates, get_location_from_osm
 debounce_lock=Lock()
 logger.enable_logs()
 from datetime import datetime
@@ -53,7 +54,12 @@ def fire_tracking(frame, conn_dict):
     if (detected_classes != ''):
         conn_dict.res_fire = {'Fire': 'None'}
         stream_logger.info('Fire Detected')         
-        location = "Karachi , Pakistan"
+        # try:
+        #     lat, lon = get_gps_coordinates()
+        #     location = get_location_from_osm(lat, lon)
+        # except Exception as e:
+        #     stream_logger.warning(f"GPS error: {e}")
+        location = "Unknown Location"
         save_detection_to_firebase("Fire Detected", location, frame)            
 
         conn_dict.res_fire = False
@@ -75,7 +81,12 @@ def weapon_tracking( frame, conn_dict):
         conn_dict.res_weap = {'Weapon': 'None'}
         
         stream_logger.info('Weapon Detected')            
-        location = "Karachi Pakistan"
+        # try:
+        #     lat, lon = get_gps_coordinates()
+        #     location = get_location_from_osm(lat, lon)
+        # except Exception as e:
+        #     stream_logger.warning(f"GPS error: {e}")
+        location = "Unknown Location"
         save_detection_to_firebase("Weapon Detected", location, frame)
         conn_dict.res_weap = False
  
@@ -100,7 +111,12 @@ def fall_jump_combined_tracking( frame, conn_dict):
                 conn_dict.res_fall = {'fall': 'None'}
                 stream_logger.info(f'Fall detection...{conn_dict.res_fall}')
                            
-                location = "Karachi , Pakistan"
+                # try:
+                #     lat, lon = get_gps_coordinates()
+                #     location = get_location_from_osm(lat, lon)
+                # except Exception as e:
+                #     stream_logger.warning(f"GPS error: {e}")
+                location = "Unknown Location"
                 save_detection_to_firebase("Fall is detected", location, frame)
                
 
