@@ -4,7 +4,7 @@ const CameraFeed = () => {
   const videoRef = useRef(null);
   const [isStreaming, setIsStreaming] = useState(true); // Track streaming status
   const [isError, setIsError] = useState(false); // Track error state
-  const apiUrl = "survelliance-website-production.up.railway.app"; // Flask backend URL
+  const apiUrl = "https://survelliance-website.onrender.com"; // Flask backend URL
 
   useEffect(() => {
     // Start streaming from Flask
