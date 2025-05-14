@@ -6,7 +6,7 @@ const CameraFeed = () => {
   const [isStreaming, setIsStreaming] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const apiUrl = "http://localhost:5000"; // Change this to your Flask backend URL
+  const apiUrl = "https://survelliance-website.onrender.com"; // Change this to your Flask backend URL
 
   useEffect(() => {
     let stream;
