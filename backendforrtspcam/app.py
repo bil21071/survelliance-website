@@ -3,7 +3,7 @@ from flask_cors import CORS
 import cv2
 import threading
 import time
-print("hello")
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -13,7 +13,7 @@ lock = threading.Lock()
 
 # RTSP stream URL
 rtsp_url = "rtsp://192.168.1.5/live/ch00_1"
-
+r
 # Maximum retry attempts
 MAX_RETRIES = 5
 RETRY_DELAY = 5  # seconds
