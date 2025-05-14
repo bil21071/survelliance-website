@@ -1,9 +1,10 @@
 from flask import Flask, request, send_file
 import io
+from flask_cors import CORS
 from datetime import datetime
 
 app = Flask(__name__)
-
+CORS(app, resources={r"/*": {"origins": "*"}})
 # Store the latest frame in memory (as bytes)
 latest_frame = None
 
