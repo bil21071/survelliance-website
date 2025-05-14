@@ -12,7 +12,7 @@ is_streaming = True
 lock = threading.Lock()
 
 # RTSP stream URL
-rtsp_url = "rtsp://192.168.1.5/live/ch00_1"
+rtsp_url = "rtsp://admin:YQAQYJ@192.168.1.18:554/main"
 
 # Maximum retry attempts
 MAX_RETRIES = 5
