@@ -5,13 +5,14 @@ const CameraFeed = () => {
   const canvasRef = useRef(null);
   const [isStreaming, setIsStreaming] = useState(false);
   const [isError, setIsError] = useState(false);
-
+  const [latestFrame, setLatestFrame] = useState(null); // State to hold the latest frame
   const apiUrl = "https://survelliance-website.onrender.com"; // Change this to your Flask backend URL
 
   useEffect(() => {
     let stream;
     let intervalId;
 
+    // Start the webcam
     const startWebcam = async () => {
       try {
         stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -40,6 +41,7 @@ const CameraFeed = () => {
         canvas.height = video.videoHeight;
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
+        // Send the captured frame to the backend as JPEG
         canvas.toBlob((blob) => {
           if (blob) {
             fetch(`${apiUrl}/upload_frame`, {
@@ -66,6 +68,30 @@ const CameraFeed = () => {
     };
   }, []);
 
+  // Fetch the latest frame from the backend every 3 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      fetchLatestFrame();
+    }, 3000); // Poll every 3 seconds
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const fetchLatestFrame = async () => {
+    try {
+      const response = await fetch(`${apiUrl}/latest_frame`);
+      if (response.ok) {
+        const imageBlob = await response.blob();
+        const imageUrl = URL.createObjectURL(imageBlob);
+        setLatestFrame(imageUrl); // Set the latest frame URL to display
+      } else {
+        console.error("No frame available");
+      }
+    } catch (error) {
+      console.error("Error fetching latest frame:", error);
+    }
+  };
+
   return (
     <div style={styles.container}>
       <div style={styles.header}>
@@ -87,6 +113,20 @@ const CameraFeed = () => {
         {isError && <div style={styles.overlay}>Permission denied</div>}
         {!isError && !isStreaming && (
           <div style={styles.overlay}>Loading camera...</div>
+        )}
+      </div>
+
+      {/* Latest Frame Display Section */}
+      <div style={styles.frameContainer}>
+        <h2 style={styles.frameTitle}>Latest Frame</h2>
+        {latestFrame ? (
+          <img
+            src={latestFrame}
+            alt="Latest Frame"
+            style={styles.latestFrameImage}
+          />
+        ) : (
+          <p style={styles.noFrameText}>Waiting for frame...</p>
         )}
       </div>
     </div>
@@ -164,6 +204,25 @@ const styles = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     textAlign: "center",
+  },
+  frameContainer: {
+    marginTop: "40px",
+    textAlign: "center",
+  },
+  frameTitle: {
+    fontSize: "2rem",
+    color: "#00C6FF",
+    marginBottom: "10px",
+  },
+  latestFrameImage: {
+    width: "80%",
+    maxWidth: "800px",
+    borderRadius: "10px",
+    boxShadow: "0 0 15px rgba(0, 198, 255, 0.8)",
+  },
+  noFrameText: {
+    color: "#b0b0b0",
+    fontSize: "1.2rem",
   },
 };
 
