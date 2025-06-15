@@ -54,7 +54,7 @@ const SecurityAgentChatbot = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 0a8c46d74aa185ed0c317e83e5945cf6722b0ab4ebc41e425a274aee3eb684af`, // 🔐 Replace with your key
+          Authorization: `Bearer 6a7a2dc2e23ad7e39c0193f6e6e5ae940918f9f4d3de3c7af6b6bf7b7206f3ae`, // 🔐 Replace with your key
         },
         body: JSON.stringify({
           model: "mistralai/Mistral-7B-Instruct-v0.1",

@@ -44,6 +44,10 @@ import {
       id: "alarmandsecurity",
       title: "Securitychatbot",
     },
+        {
+      id: "Fightdetection",
+      title: "fight",
+    },
     // {
     //   id: "motion style transfer",
     //   title: "Motion Transfer",

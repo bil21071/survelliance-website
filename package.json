@@ -19,7 +19,7 @@
     "docx": "^9.4.1",
     "express": "^4.21.2",
     "file-saver": "^2.0.5",
-    "firebase": "^11.6.0",
+    "firebase": "^11.8.1",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.15.0",
     "jspdf": "^3.0.1",
@@ -36,6 +36,7 @@
     "react-tilt": "^1.0.2",
     "react-typed": "^2.0.12",
     "react-vertical-timeline-component": "^3.5.3",
+    "recharts": "^2.15.3",
     "three": "^0.172.0"
   },
   "devDependencies": {

@@ -1,16 +1,22 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database"; // Realtime Database
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDV0a4jpMK82Gsmed_61L1VEJJsDNjOtPs",
-  authDomain: "surveilliance-website.firebaseapp.com",
-  databaseURL: "https://surveilliance-website-default-rtdb.firebaseio.com",
-  projectId: "surveilliance-website",
-  storageBucket: "surveilliance-website.firebasestorage.app",
-  messagingSenderId: "185241880517",
-  appId: "1:185241880517:web:c72e1503612d652037edac",
-  measurementId: "G-8G82JQ9RZ2"
+  apiKey: "AIzaSyD7yuM8mkmCRATvhKyAeWQbsH3rFDBHMFU",
+  authDomain: "rveilx.firebaseapp.com",
+  databaseURL: "https://rveilx-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "rveilx",
+  storageBucket: "rveilx.firebasestorage.app",
+  messagingSenderId: "968434901886",
+  appId: "1:968434901886:web:ce2a9ae3dacff15037892f",
+  measurementId: "G-NBM5DBCYGG"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);

@@ -67,6 +67,8 @@ const Navbar = () => {
       navigate('/anomalyreportgen'); // Navigate to the reports page
     }else if (link.id === 'alarmandsecurity') {
       navigate('/Securityagentchatbot'); // Navigate to the reports page
+    }else if (link.id === 'Fightdetection') {
+      navigate('/fight-detection'); // Navigate to the livestream page
     }else {
       navigate('/'); // Default to the home page if no conditions match// Ensure we're on the home page first
       setTimeout(() => {
@@ -132,6 +134,7 @@ const Navbar = () => {
                   {link.id === 'Aialerts' ? 'AiAlerts' : link.title}
                   {link.id === 'report' ? 'Anomalyreportgenerator' : link.title}
                   {link.id === 'alarmandsecurity' ? 'Securitychatbot' : link.title}
+                  {link.id === 'Fightdetection' ? 'fight' : link.title}
 
                 </li>
               ))}

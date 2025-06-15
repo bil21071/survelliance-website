@@ -2,131 +2,55 @@ import React, { useEffect, useRef, useState } from "react";
 
 const CameraFeed = () => {
   const videoRef = useRef(null);
-  const canvasRef = useRef(null);
-  const [isStreaming, setIsStreaming] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [latestFrame, setLatestFrame] = useState(null); // State to hold the latest frame
-  const apiUrl = "https://survelliance-website.onrender.com"; // Change this to your Flask backend URL
+  const [isStreaming, setIsStreaming] = useState(true); // Track streaming status
+  const [isError, setIsError] = useState(false); // Track error state
+  const apiUrl = "http://localhost:5000"; // Flask backend URL
 
   useEffect(() => {
-    let stream;
-    let intervalId;
-
-    // Start the webcam
-    const startWebcam = async () => {
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
-
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-          setIsStreaming(true);
-        }
-
-        // Start sending frames every 1 second
-        intervalId = setInterval(() => {
-          captureAndSendFrame();
-        }, 1000);
-      } catch (error) {
-        console.error("Error accessing webcam:", error);
-        setIsError(true);
-      }
-    };
-
-    const captureAndSendFrame = () => {
-      const video = videoRef.current;
-      const canvas = canvasRef.current;
-      if (video && canvas) {
-        const ctx = canvas.getContext("2d");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-        // Send the captured frame to the backend as JPEG
-        canvas.toBlob((blob) => {
-          if (blob) {
-            fetch(`${apiUrl}/upload_frame`, {
-              method: "POST",
-              body: blob,
-              headers: {
-                "Content-Type": "image/jpeg",
-              },
-            }).catch((err) => {
-              console.error("Failed to send frame:", err);
-            });
-          }
-        }, "image/jpeg", 0.8);
-      }
-    };
-
-    startWebcam();
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-      if (videoRef.current?.srcObject) {
-        videoRef.current.srcObject.getTracks().forEach((track) => track.stop());
-      }
-    };
-  }, []);
-
-  // Fetch the latest frame from the backend every 3 seconds
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      fetchLatestFrame();
-    }, 3000); // Poll every 3 seconds
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const fetchLatestFrame = async () => {
-    try {
-      const response = await fetch(`${apiUrl}/latest_frame`);
-      if (response.ok) {
-        const imageBlob = await response.blob();
-        const imageUrl = URL.createObjectURL(imageBlob);
-        setLatestFrame(imageUrl); // Set the latest frame URL to display
-      } else {
-        console.error("No frame available");
-      }
-    } catch (error) {
-      console.error("Error fetching latest frame:", error);
+    // Start streaming from Flask
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.src = `${apiUrl}/video_feed`;
     }
-  };
+    
+    // Handle errors in video stream
+    const handleError = (event) => {
+      console.error("Error loading video stream:", event);
+      setIsError(true); // Set error state if stream fails
+    };
+
+    // Attach error event listener
+    if (videoElement) {
+      videoElement.addEventListener('error', handleError);
+    }
+
+    // Clean up event listener on unmount
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('error', handleError);
+      }
+    };
+  }, []);
 
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <h1 style={styles.title}>📷 Local Camera Feed</h1>
-        <p style={styles.subtitle}>Streaming to Backend</p>
+        <h1 style={styles.title}>🤖 AI Surveillance</h1>
+        <p style={styles.subtitle}>Live Camera Feed Streaming</p>
       </div>
       <div style={styles.cameraContainer}>
         {isError ? (
-          <div style={styles.error}>Failed to access webcam</div>
+          <div style={styles.error}>Failed to load stream</div>
         ) : (
-          <video
-            ref={videoRef}
-            autoPlay
-            playsInline
-            style={styles.video}
-          />
-        )}
-        <canvas ref={canvasRef} style={{ display: "none" }} />
-        {isError && <div style={styles.overlay}>Permission denied</div>}
-        {!isError && !isStreaming && (
-          <div style={styles.overlay}>Loading camera...</div>
-        )}
-      </div>
-
-      {/* Latest Frame Display Section */}
-      <div style={styles.frameContainer}>
-        <h2 style={styles.frameTitle}>Latest Frame</h2>
-        {latestFrame ? (
           <img
-            src={latestFrame}
-            alt="Latest Frame"
-            style={styles.latestFrameImage}
-          />
-        ) : (
-          <p style={styles.noFrameText}>Waiting for frame...</p>
+          src={`${apiUrl}/video_feed`}
+          alt="Live Camera Feed"
+          style={styles.video}
+        />
+        )}
+        {isError && <div style={styles.overlay}>Error loading stream...</div>}
+        {!isError && !isStreaming && (
+          <div style={styles.overlay}>Loading Stream...</div>
         )}
       </div>
     </div>
@@ -181,7 +105,6 @@ const styles = {
     height: "100%",
     borderRadius: "20px",
     filter: "brightness(90%) contrast(110%) saturate(120%)",
-    objectFit: "cover",
   },
   overlay: {
     position: "absolute",
@@ -204,25 +127,6 @@ const styles = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     textAlign: "center",
-  },
-  frameContainer: {
-    marginTop: "40px",
-    textAlign: "center",
-  },
-  frameTitle: {
-    fontSize: "2rem",
-    color: "#00C6FF",
-    marginBottom: "10px",
-  },
-  latestFrameImage: {
-    width: "80%",
-    maxWidth: "800px",
-    borderRadius: "10px",
-    boxShadow: "0 0 15px rgba(0, 198, 255, 0.8)",
-  },
-  noFrameText: {
-    color: "#b0b0b0",
-    fontSize: "1.2rem",
   },
 };
 

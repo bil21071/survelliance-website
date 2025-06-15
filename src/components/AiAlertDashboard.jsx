@@ -49,7 +49,9 @@ const AiAlerts = () => {
           const alertsArray = Object.entries(data).map(([id, alert]) => ({
             id,
             ...alert,
+
           }));
+          // alertsArray.sort((a, b) => moment(b.timestamp).valueOf() - moment(a.timestamp).valueOf());
           setAlerts(alertsArray);
           updateAnomaliesCount(alertsArray);
           updateLineChartData(alertsArray);

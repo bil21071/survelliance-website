@@ -2,7 +2,7 @@
 import { BrowserRouter as Router ,Route,Routes } from 'react-router-dom';
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar,  Tech, Works, StarsCanvas ,CameraFeed} from './components';
-
+import FightDetectionPage from './components/fightdetectdashboard';
 import 'font-awesome/css/font-awesome.min.css';
 import AiAlerts from './components/AiAlertDashboard';
 import AnomalyReportGenerator from './components/AnomalyReportGenerator';
@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/aialert" element={<AiAlerts />} />
           <Route path="/anomalyreportgen" element={<AnomalyReportGenerator />} />
           <Route path="/Securityagentchatbot" element={<SecurityAgentChatbot />} />
+          <Route path="/fight-detection" element={<FightDetectionPage />} />
         </Routes>
       </div>
     </Router>
